@@ -42,8 +42,8 @@ end
 
 def fib_r(n)
   return [1,1].take(n) if n <= 2
-  arr = fib_r(n-1) << fib_r(n-1)[-1] + fib_r(n-1)[-2]
-  arr
+  fibs = fib_r(n-1)
+  fibs << fibs[-1] + fibs[-2]
 end
 
 def fib_i(n)
