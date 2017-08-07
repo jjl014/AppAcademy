@@ -12,7 +12,6 @@ factors,array,problems/factors.rb,specs/factors_spec.rb,solutions/factors_soluti
 fibs_sum,recursion,problems/fibs_sum.rb,specs/fibs_sum_spec.rb,solutions/fibs_sum_solution.rb
 first_even_numbers_sum,recursion,problems/first_even_numbers_sum.rb,specs/first_even_numbers_sum_spec.rb,solutions/first_even_numbers_sum_solution.rb
 jumble_sort,sort,problems/jumble_sort.rb,specs/jumble_sort_spec.rb,solutions/jumble_sort_solution.rb
-make_better_change,recursion,problems/make_better_change.rb,specs/make_better_change_spec.rb,solutions/make_better_change_solution.rb
 median,array,problems/median.rb,specs/median_spec.rb,solutions/median_solution.rb
 merge_sort,sort,problems/merge_sort.rb,specs/merge_sort_spec.rb,solutions/merge_sort_solution.rb
 my_all,enumerable,problems/my_all.rb,specs/my_all_spec.rb,solutions/my_all_solution.rb

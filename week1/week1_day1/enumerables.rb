@@ -44,7 +44,7 @@ class Array
 
   def my_zip(*args)
     results = []
-    args_num = args.length
+    # args_num = args.length
 
     each.with_index do |e, idx|
       results << [e]
