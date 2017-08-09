@@ -6,9 +6,15 @@ require 'byebug'
 
 def factorials_rec(num)
   return [1] if num <= 1
-  facs = factorials_rec(num -1)
+  facs = factorials_rec(num - 1)
   facs << facs.last * (num - 1)
 end
+# fr(3)
+# fr(2)
+# fr(1)
+# [1]
+# [1,2]
+# [1,2,6]
 
 # return b^n recursively. Your solution should accept negative values
 # for n
@@ -111,7 +117,7 @@ def first_even_numbers_sum(n)
   # debugger
   return 2 if n == 1
   prev_sum = first_even_numbers_sum(n-1)
-  prev_sum += 2 * n
+  prev_sum = prev_sum + ( 2 * n )
 end
 # fens(3)
 # fens(2)
@@ -166,7 +172,6 @@ end
 #
 # prime_factorization(12) => [2,2,3]
 def prime_factorization(num)
-  return [] if num == 1
   (2..Math.sqrt(num).ceil).to_a.each do |i|
     if num % i == 0
       return [i] + prime_factorization(num/i)
@@ -328,8 +333,8 @@ class Array
   # Write a monkey patch of binary search:
   # E.g. [1, 2, 3, 4, 5, 7].my_bsearch(5) => 4
   def my_bsearch(target, &prc)
-    return nil if self.size == 0
-    prc ||= Proc.new {|n1,n2| n1 <=> n2}
+    return nil if self.empty?
+    prc ||= Proc.new { |n1, n2| n1 <=> n2 }
     midpt = self.length/2
     case prc.call(target, self[midpt])
     when -1

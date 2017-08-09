@@ -33,6 +33,15 @@ def factorials_rec(num)
   end
 end
 
+# fr5
+# fr4
+# fr3
+# fr2
+# fr1
+# [1]
+# [1,1]
+# [1,1,2,]
+
 # Write an Array#dups method that will return a hash containing the indices of all
 # duplicate elements. The keys are the duplicate elements; the values are
 # arrays of their indices in ascending order, e.g.
