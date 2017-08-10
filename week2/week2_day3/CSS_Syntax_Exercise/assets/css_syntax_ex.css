@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: gray;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 32px
+}
+
+ul.ingredients-list {
+  list-style: square inside;
+}
+
+ol {
+  list-style: armenian inside;
+}
+
+header > img {
+  width: 100px;
+}
+
+ul > li > a {
+  text-decoration-line: none;
+  color: inherit;
+}
+
+.user_review {
+  border-style: dashed;
+  border-width: medium;
+  color: white;
+}
+
+.user_review h4 {
+  font-size: 28;
+  font-weight: bold;
+}
