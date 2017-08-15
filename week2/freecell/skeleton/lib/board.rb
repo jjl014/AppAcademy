@@ -84,12 +84,6 @@ class Board
     8.times { |num| tableaus[num] = Tableau.new(temporary_tableaus[num]) }
   end
 
-  def get_stack(tab_num, index)
-    @hand = tableaus[tab_num].grab(index)
-    set_message("")
-    cursor_pos[0] -= 1 if cursor_pos[0] > lower_limit
-  end
-
   def in_bounds?(pos)
     x, y = pos
     x < 0 || x > lower_limit || y < 0 || y > 7 ? false : true
@@ -102,6 +96,12 @@ class Board
   def place_on_tab(tab_num)
     tableaus[tab_num].add_cards(hand)
     set_message("")
+  end
+
+  def get_stack(tab_num, index)
+    @hand = tableaus[tab_num].grab(index)
+    set_message("")
+    cursor_pos[0] -= 1 if cursor_pos[0] > lower_limit
   end
 
   def place_in_freecells(index)
