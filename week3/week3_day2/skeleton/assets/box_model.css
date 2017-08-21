@@ -1,0 +1,126 @@
+/* Introduction to Cascading Style Sheets */
+
+body {
+  /* If the user cannot load the Arial font, the sans-serif font is used */
+  font-family: Arial, sans-serif;
+  background-color: #FEFFF1;
+  width: 700px;
+  margin: 0 auto;
+  display: flex-start;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+/* This selector selects ALL anchor tag children of ALL list elements that
+are children of an Unordered Lsit element */
+ul li a, figcaption a {
+  text-decoration: none;
+  color: inherit;
+}
+
+aside {
+  width: 180px;
+  margin: 15px;
+  display: inline-block;
+
+}
+
+#info {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+
+}
+
+/* This selector selects only IMMEDIATE (1 level deep) image element children
+of the header element */
+header > img {
+  width: 100px;
+  display: inline-block;
+}
+
+header {
+  display: block;
+}
+
+nav {
+  display: inline-block;
+}
+nav ul li  {
+  display: inline-block;
+  background-color: green;*
+}
+nav ul li a {
+  padding: 20px;
+  display: inherit;
+}
+
+/* Selects all elements with the class attribute "ingredients-list" */
+.ingredients-list {
+
+  /* The list sty**********le property is shorthand for multiple list-style properties*/
+  list-style: square inside;
+  margin: 15px 0;
+}
+
+ol {
+  list-style: upper-roman inside;
+}
+
+.user_review h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    width: 27px;
+    height: 27px;
+    background-image: url(../assets/stars.png);
+    vertical-align: bottom;
+}
+
+input[type="radio"]:checked {
+  background-position: 30px 30px;
+}
+
+ ol li {
+  margin: 15px 0;
+}
+
+ul li {
+  margin: 15px 0;
+}
+
+#name, #rating, #expertise, #review {
+  display: block;
+  
+}
+
+#expertise {
+  margin: 15px;
+  width: 500px
+
+}
+input:last-child {
+    background: gold;
+}
+
+input:last-child:hover {
+    -webkit-filter: brightness(90%);
+}
+
+ol li:nth-of-type(2n) {
+  background-color: whitesmoke;
+}
+
+h2 + .user_review {
+    border-top: 1px solid black;
+}
