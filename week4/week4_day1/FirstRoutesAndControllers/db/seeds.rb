@@ -7,19 +7,38 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Artwork.destroy_all
 
-user1 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user2 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user3 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user4 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user5 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user6 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user7 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user8 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user9 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user10 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user11 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user12 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user13 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user14 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
-user15 = User.create(username: Faker::Name.name, email: Faker::Internet.email)
+user1 = User.create(username: Faker::Name.name)
+user2 = User.create(username: Faker::Name.name)
+user3 = User.create(username: Faker::Name.name)
+user4 = User.create(username: Faker::Name.name)
+user5 = User.create(username: Faker::Name.name)
+
+artwork1 = Artwork.create(title: Faker::Movie.quote,
+            image_url: "https://s-media-cache-ak0.pinimg.com/originals/75/4c/7e/754c7e41f683ef639e73b6445387c6bd.jpg",
+            artist_id: user1.id)
+artwork2 = Artwork.create(title: Faker::Movie.quote,
+            image_url: "https://s-media-cache-ak0.pinimg.com/736x/a0/00/f1/a000f11a9ef3121874d0b107fb6f09cd--funny-animal-memes-funny-memes.jpg",
+            artist_id: user2.id)
+artwork3 = Artwork.create(title: Faker::Movie.quote,
+            image_url: "http://www.bajiroo.com/wp-content/uploads/2013/06/funny-dude-toasters-meme.jpg",
+            artist_id: user1.id)
+artwork4 = Artwork.create(title: Faker::Movie.quote,
+            image_url: "https://s-media-cache-ak0.pinimg.com/originals/b4/63/d3/b463d307db5bcdfecdc35f1c56658cd7.jpg",
+            artist_id: user3.id)
+artwork5 = Artwork.create(title: Faker::Movie.quote,
+            image_url: "http://rs455.pbsrc.com/albums/qq277/yourcoloriwonder/Funny/a931409e9eeaa50af847eb18daaa4ff1.gif~c200",
+            artist_id: user2.id)
+
+ArtworkShare.create(artwork2.id, user1.id)
+ArtworkShare.create(artwork3.id, user1.id)
+ArtworkShare.create(artwork1.id, user2.id)
+ArtworkShare.create(artwork3.id, user3.id)
+ArtworkShare.create(artwork2.id, user3.id)
+ArtworkShare.create(artwork1.id, user4.id)
+ArtworkShare.create(artwork3.id, user4.id)
+ArtworkShare.create(artwork2.id, user5.id)
+ArtworkShare.create(artwork1.id, user5.id)
+ArtworkShare.create(artwork3.id, user5.id)
+ArtworkShare.create(artwork1.id, user3.id)
