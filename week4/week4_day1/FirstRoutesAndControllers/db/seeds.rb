@@ -8,6 +8,7 @@
 
 User.destroy_all
 Artwork.destroy_all
+ArtworkShare.destroy_all
 
 user1 = User.create(username: Faker::Name.name)
 user2 = User.create(username: Faker::Name.name)
@@ -31,14 +32,14 @@ artwork5 = Artwork.create(title: Faker::Movie.quote,
             image_url: "http://rs455.pbsrc.com/albums/qq277/yourcoloriwonder/Funny/a931409e9eeaa50af847eb18daaa4ff1.gif~c200",
             artist_id: user2.id)
 
-ArtworkShare.create(artwork2.id, user1.id)
-ArtworkShare.create(artwork3.id, user1.id)
-ArtworkShare.create(artwork1.id, user2.id)
-ArtworkShare.create(artwork3.id, user3.id)
-ArtworkShare.create(artwork2.id, user3.id)
-ArtworkShare.create(artwork1.id, user4.id)
-ArtworkShare.create(artwork3.id, user4.id)
-ArtworkShare.create(artwork2.id, user5.id)
-ArtworkShare.create(artwork1.id, user5.id)
-ArtworkShare.create(artwork3.id, user5.id)
-ArtworkShare.create(artwork1.id, user3.id)
+ArtworkShare.create(artwork_id: artwork2.id, viewer_id: user1.id)
+ArtworkShare.create(artwork_id: artwork3.id, viewer_id: user1.id)
+ArtworkShare.create(artwork_id: artwork1.id, viewer_id: user2.id)
+ArtworkShare.create(artwork_id: artwork3.id, viewer_id: user3.id)
+ArtworkShare.create(artwork_id: artwork2.id, viewer_id: user3.id)
+ArtworkShare.create(artwork_id: artwork1.id, viewer_id: user4.id)
+ArtworkShare.create(artwork_id: artwork3.id, viewer_id: user4.id)
+ArtworkShare.create(artwork_id: artwork2.id, viewer_id: user5.id)
+ArtworkShare.create(artwork_id: artwork1.id, viewer_id: user5.id)
+ArtworkShare.create(artwork_id: artwork3.id, viewer_id: user5.id)
+ArtworkShare.create(artwork_id: artwork1.id, viewer_id: user3.id)

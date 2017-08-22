@@ -13,7 +13,7 @@ class ArtworkShare < ApplicationRecord
   validates :artwork_id, presence: true
   validates :viewer_id, presence: true, uniqueness: {
                                         scope: :artwork_id,
-                                        message: "ArtworkShare already exists."}
+                                        message: "shared his artwork already."}
 
   belongs_to :viewer,
     primary_key: :id,

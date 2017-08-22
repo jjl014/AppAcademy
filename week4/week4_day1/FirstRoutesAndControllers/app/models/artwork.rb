@@ -15,7 +15,7 @@ class Artwork < ApplicationRecord
   validates :image_url, presence: true
   validates :artist_id, presence: true, uniqueness: {
                                         scope: :title,
-                                        messsage: "You already viewed this?"}
+                                        messsage: "has seen this artwork already."}
 
   belongs_to :artist,
     primary_key: :id,
