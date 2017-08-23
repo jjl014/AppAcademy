@@ -1,0 +1,9 @@
+<h1><%= @cat.name.capitalize %>'s Details</h1>
+<table>
+  <% @cat.attributes.each do |k,v| %>
+    <tr>
+      <td><%= k %></td>
+      <td><%= v %></td>
+    </tr>
+  <% end %>
+</table>
