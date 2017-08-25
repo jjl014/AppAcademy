@@ -1,0 +1,11 @@
+<h1>CREATE ACCOUNT</h1>
+<%= render "shared/errors" %>
+<form action="<%= users_url %>" method="post">
+  <!-- post send it to # create -->
+  <label for="user_name">Enter user name</label>
+  <input id="user_name" type="text" name="user[user_name]">
+  <label for="password">create password</label>
+  <input id="password" type="password" name="user[password]">
+  <!-- this is passed to the user#create as params  -->
+  <input type="submit" value="Create user name!">
+</form>
