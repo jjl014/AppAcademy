@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  #protect_from_forgery with: :exception
+  protect_from_forgery with: :exception
 
   helper_method :current_user #this gives access to whole current_user method,  not just the instance variable at the end
 

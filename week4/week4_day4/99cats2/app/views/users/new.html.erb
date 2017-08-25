@@ -1,6 +1,7 @@
 <h1>CREATE ACCOUNT</h1>
 <%= render "shared/errors" %>
 <form action="<%= users_url %>" method="post">
+  <%= auth_token %>
   <!-- post send it to # create -->
   <label for="user_name">Enter user name</label>
   <input id="user_name" type="text" name="user[user_name]">

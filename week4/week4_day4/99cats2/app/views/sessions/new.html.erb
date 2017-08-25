@@ -1,6 +1,7 @@
 <h1>LOGIN</h1>
 <%= render "shared/errors" %>
 <form action="<%= session_url %>" method="post">
+  <%= auth_token %>
   <!-- post send it to # create -->
   <label for="user_name">Enter username</label>
   <input id="user_name" type="text" name="user[user_name]">
