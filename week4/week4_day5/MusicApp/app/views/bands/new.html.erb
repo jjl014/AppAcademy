@@ -1,0 +1,7 @@
+<h2 class="center">Create a New Band</h2>
+<div class="center group">
+  <div class="errors">
+    <%= render "shared/errors" %>
+  </div>
+  <%= render "forms", action: bands_url, method: :post %>
+</div>

@@ -1,4 +1,12 @@
 class CatRentalRequestsController < ApplicationController
+
+  before_action :is_cat_owner, only: [:approve, :deny]
+
+  def is_cat_owner
+    cats = current_user.cats.where(id: params[:cat_id])
+    redirect_to root_url if cats.empty?
+  end
+
   def approve
     current_cat_rental_request.approve!
     redirect_to cat_url(current_cat)

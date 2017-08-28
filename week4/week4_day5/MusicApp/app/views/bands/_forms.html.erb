@@ -1,0 +1,8 @@
+<form class="form group" action="<%= action %>" method="post">
+  <%= auth_token %>
+  <input type="hidden" name="_method" value="<%= method %>">
+  <label for="band">Enter a Band Name</label>
+  <input id="band" type="text" name="band[name]">
+  <br>
+  <input type="submit"value="Submit">
+</form>

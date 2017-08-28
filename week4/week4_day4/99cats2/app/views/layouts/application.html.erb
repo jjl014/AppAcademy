@@ -11,9 +11,10 @@
 
   <body>
     <header>
+      <%= button_to "99 Cats", cats_url, method: :get %>
       <% if current_user %>
-        <%= current_user.user_name %>
         <%= button_to 'logout', session_url, method: :delete %>
+        <h1>Hello, <%= current_user.user_name.capitalize %>!</h1>
       <% else %>
         <%= button_to 'login', new_session_url, method: :get %>
         <%= button_to 'sign up', new_user_url, method: :get %>

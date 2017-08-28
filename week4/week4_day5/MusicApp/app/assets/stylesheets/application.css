@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  margin: 0 auto;
+  width: 60%;
+  height: auto;
+  display: flex;
+  background: url(/assets/music_bg.jpg) 0 0 fixed;
+  background-size: cover;
+}
+
+/*@media (max-width: 900px) {
+  body {
+  }
+}*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .nav {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+input[type=submit] {
+  background-color: #43A032;
+  color: white;
+  border-radius: 3px;
+  border: 1px solid white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #43C532;
+  border: 1px solid green;
+}
+
+header .nav input {
+  margin-left: 10px;
+}
+
+a {
+  background-color: #0005FF;
+  border-radius: 2px;
+}
+
+h1 {
+  color: #d04764;
+  font-family: 'Lobster', cursive;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 0 0 18px;
+  text-shadow: 1px 0 0 #fff;
+}
+
+
+h2 {
+  color: #2CA4B0;
+  font-family: 'Oleo Script', cursive;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+  margin: 0 0 18px;
+  text-shadow: 1px 0 0 #fff;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+form input, form label {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+form {
+  font-family: 'Oleo Script', cursive;
+  display: flex;
+  flex-direction: column;
+}
+
+.errors {
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.errors ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  list-style: none;
+  padding: 0;
+  color: red;
+}
+
+.errors ul li{
+}
+
+
+.group {
+  content: "";
+  display: block;
+  clear: both;
+}

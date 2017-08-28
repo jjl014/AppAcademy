@@ -1,4 +1,3 @@
-<%= button_to "All Cats", cats_url, method: :get %>
 <h1><%= @cat.name %></h1>
 
 <table>
@@ -23,7 +22,8 @@
     <th>End Date</th>
     <th>Status</th>
   </tr>
+  <% show_button = (@cat.user_id == current_user.id) %>
   <% @cat.rental_requests.order('start_date').each do |req| %>
-    <%= render 'req_tr', req: req %>
+    <%= render 'req_tr', req: req, show_button: show_button %>
   <% end %>
 </table>

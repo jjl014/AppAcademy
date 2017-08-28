@@ -1,0 +1,7 @@
+<h2 class="center">Sign In</h2>
+<div class="center group">
+  <div class="errors">
+    <%= render "shared/errors" %>
+  </div>
+  <%= render "shared/forms", action: session_url, method: :post %>
+</div>
