@@ -48,7 +48,6 @@ RSpec.feature "Auths", type: :feature do
       visit new_session_url
       fill_in 'Username', with: "helloworld"
       fill_in 'Password', with: "good_password"
-      save_and_open_page
       click_on 'Sign In'
       click_on 'Sign Out'
       expect(page).to_not have_content("helloworld")
