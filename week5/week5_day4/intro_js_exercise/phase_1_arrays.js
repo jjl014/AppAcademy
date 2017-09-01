@@ -40,7 +40,7 @@ Array.prototype.transpose2 = function transpose() {
   }
 };
 
-function Create2dArray(row, col) {
-  let new_arr = new Array(row);
-
-}
+// function Create2dArray(row, col) {
+//   let new_arr = new Array(row);
+//
+// }

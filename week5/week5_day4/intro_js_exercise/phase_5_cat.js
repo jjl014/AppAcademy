@@ -10,25 +10,25 @@ Cat.prototype.cuteStatement = function cuteStatement() {
 let cat1 = new Cat('kitty', 'Jimmy');
 let cat2 = new Cat('dog', 'Priya');
 
-console.log(cat1.cuteStatement());
-console.log(cat2.cuteStatement());
+// console.log(cat1.cuteStatement());
+// console.log(cat2.cuteStatement());
 
 Cat.prototype.cuteStatement = function cuteStatement() {
   return `Everybody loves ${this.name}`;
 };
 
-console.log(cat1.cuteStatement());
-console.log(cat2.cuteStatement());
+// console.log(cat1.cuteStatement());
+// console.log(cat2.cuteStatement());
 
 Cat.prototype.meow = function meow() {
   return 'meow';
 };
 
-console.log(cat1.meow());
-console.log(cat2.meow());
+// console.log(cat1.meow());
+// console.log(cat2.meow());
 
 cat1.meow = function () {
   return 'woooof';
 };
-console.log(cat1.meow());
-console.log(cat2.meow());
+// console.log(cat1.meow());
+// console.log(cat2.meow());
