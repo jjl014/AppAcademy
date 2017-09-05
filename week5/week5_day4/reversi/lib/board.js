@@ -5,6 +5,15 @@ let Piece = require("./piece");
  * and two white pieces at [3, 3] and [4, 4]
  */
 function _makeGrid () {
+  let arr = new Array(8);
+  for (var i = 0; i < 8; i++) {
+    arr[i] = new Array(8);
+  }
+  arr[3][4] = new Piece("black");
+  arr[4][3] = new Piece("black");
+  arr[3][3] = new Piece("white");
+  arr[4][4] = new Piece("white");
+  return arr;
 }
 
 /**
@@ -25,12 +34,18 @@ Board.DIRS = [
  * throwing an Error if the position is invalid.
  */
 Board.prototype.getPiece = function (pos) {
+  if (pos[0] < 0 || pos[0] > 7 || pos[1] < 0 || pos[1] > 7) {
+    throw "Position not on board.";
+  } else {
+    return this.grid[pos[0]][pos[1]];
+  }
 };
 
 /**
  * Checks if there are any valid moves for the given color.
  */
 Board.prototype.hasMove = function (color) {
+
 };
 
 /**
@@ -38,12 +53,17 @@ Board.prototype.hasMove = function (color) {
  * matches a given color.
  */
 Board.prototype.isMine = function (pos, color) {
+  return this.grid[pos[0]][pos[1]].color === color;
 };
 
 /**
  * Checks if a given position has a piece on it.
  */
 Board.prototype.isOccupied = function (pos) {
+  if (this.grid[pos[0]][pos[1]] instanceof Piece) {
+    return true;
+  }
+  return false;
 };
 
 /**
