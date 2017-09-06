@@ -1,0 +1,36 @@
+.ttt {
+  width: 605px;
+  height: 605px;
+}
+
+.cell {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border: solid 1px black;
+  float: left;
+}
+
+ul {
+  padding: none;
+  width: inherit;
+  height: inherit;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+}
+
+.unrevealed {
+  background-color: grey;
+}
+
+.unrevealed:hover {
+  background-color: yellow;
+}
+
+.revealed {
+  background-color: white;
+  font-size: 200px;
+}

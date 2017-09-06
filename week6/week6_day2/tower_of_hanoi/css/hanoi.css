@@ -1,0 +1,56 @@
+.hanoi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 300px;
+}
+.hanoi ul {
+  width: 200px;
+  height: inherit;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.hanoi ul:hover {
+  border-bottom: solid 10px purple;
+}
+
+.hanoi ul li{
+  list-style: none;
+}
+
+
+.hanoi .disk-1 {
+  border: solid 1px black;
+  width: 50%;
+  background: red;
+  height: 30%;
+  margin: 3px auto;
+}
+
+.hanoi .disk-2 {
+  border: solid 1px black;
+  width: 75%;
+  background: green;
+  height: 30%;
+  margin: 3px auto;
+}
+
+.hanoi .disk-3 {
+  border: solid 1px black;
+  width: 100%;
+  background: blue;
+  height: 30%;
+  margin: 3px auto;
+}
+
+.selected {
+  border-bottom: solid 10px yellow;
+}
+
+.unselected {
+  border-bottom: solid 10px black;
+}
