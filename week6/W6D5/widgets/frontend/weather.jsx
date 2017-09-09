@@ -43,8 +43,9 @@ class Weather extends React.Component {
   }
 
   render() {
-    return (
-      <div className="weather">
+    let content = <div></div>;
+    if(this.state.name) {
+      content = <div className="weather">
         <div className="row">
           <h2>Location</h2>
           <h2>{this.state.name}</h2>
@@ -65,6 +66,17 @@ class Weather extends React.Component {
           <h2>Condition</h2>
           <h2>{this.state.condition}y</h2>
         </div>
+      </div>;
+    } else {
+      content = <div className="weather">
+        <h2>Loading Weather...</h2>
+      </div>;
+    }
+    return (
+      <div>
+        {
+          content
+        }
       </div>
 
     );

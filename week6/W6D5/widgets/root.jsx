@@ -1,6 +1,7 @@
 import React from 'react';
 import Clock from './frontend/clock';
 import Weather from './frontend/weather';
+import AutoComplete from './frontend/autocomplete';
 
 class Root extends React.Component {
 
@@ -10,11 +11,13 @@ class Root extends React.Component {
 
   render() {
     return (
-        <div>
-          <h1>Clock Widget</h1>
+        <div className="root">
+          <h1>Clock</h1>
           <Clock />
-          <h1>Weather Widget</h1>
+          <h1>Weather</h1>
           <Weather />
+          <h1>Auto Complete</h1>
+          <AutoComplete />
         </div>
     );
   }

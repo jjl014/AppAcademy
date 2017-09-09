@@ -1,5 +1,8 @@
 #main {
   width: 800px;
+  display:flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .timeformat {
@@ -9,22 +12,33 @@
   font-size: 50px;
 }
 
+.root {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
 h2 {
   padding: 0;
-  margin: 10px;
+  margin: 5px;
+}
+h3 {
+  margin: 5px 15px 5px 0px;
 }
 
 .clock, .weather {
-  /*display: flex;
-  flex-direction: column;*/
-  background-color: orange;
   border: solid 5px black;
 }
 
+.clock {
+  background-color: orange;
+}
 
 .weather {
-  box-sizing: border-box;
+  width: 320px;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
 }
 
 .row {
