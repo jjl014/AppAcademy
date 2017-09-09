@@ -1,0 +1,40 @@
+#main {
+  width: 800px;
+}
+
+.timeformat {
+  /*font-family: 'Libre Barcode 39 Text', cursive;*/
+  font-family: 'Libre Barcode 39 Extended Text', cursive;
+
+  font-size: 50px;
+}
+
+
+h2 {
+  padding: 0;
+  margin: 10px;
+}
+
+.clock, .weather {
+  /*display: flex;
+  flex-direction: column;*/
+  background-color: orange;
+  border: solid 5px black;
+}
+
+
+.weather {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.row-right {
+  display: flex;
+  justify-content: flex-end;
+}
