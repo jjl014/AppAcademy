@@ -4,7 +4,7 @@ import Root from './root';
 
 
 document.addEventListener('DOMContentLoaded', event => {
-  ReactDOM.render(<Root />, document.getElementById('main'));
+  ReactDOM.render(<Root />, document.getElementById('main'))
 });
 
 window.Root = Root;

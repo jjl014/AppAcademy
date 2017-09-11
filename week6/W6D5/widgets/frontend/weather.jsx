@@ -6,6 +6,7 @@ class Weather extends React.Component {
     super();
     this.state = {name: "", temp: "", high: "", low: "", humidity: "", condition: "", wind: ""};
     this.getWeather = this.getWeather.bind(this);
+    this.kToF = this.kToF.bind(this);
   }
 
   componentDidMount() {
@@ -42,29 +43,33 @@ class Weather extends React.Component {
     req.send();
   }
 
+  kToF(farenheit) {
+    return Math.ceil((farenheit * 9/5) - 459.67);
+  }
+
   render() {
     let content = <div></div>;
     if(this.state.name) {
       content = <div className="weather">
         <div className="row">
-          <h2>Location</h2>
+          <h2>Location:</h2>
           <h2>{this.state.name}</h2>
         </div>
         <div className="row">
-          <h2>Temperature</h2>
-          <h2>{this.state.temp}</h2>
+          <h2>Temperature:</h2>
+          <h2>{this.kToF(this.state.temp)}ºF</h2>
         </div>
         <div className="row-right">
-          <h3>High: {this.state.high}</h3>
-          <h3>Low: {this.state.low}</h3>
+          <h3>High: {this.kToF(this.state.high)}ºF</h3>
+          <h3>Low: {this.kToF(this.state.low)}ºF</h3>
         </div>
         <div className="row">
-          <h2>Wind</h2>
+          <h2>Wind:</h2>
           <h2>{this.state.wind} MPH</h2>
         </div>
         <div className="row">
-          <h2>Condition</h2>
-          <h2>{this.state.condition}y</h2>
+          <h2>Condition:</h2>
+          <h2>{this.state.condition}</h2>
         </div>
       </div>;
     } else {

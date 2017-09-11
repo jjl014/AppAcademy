@@ -1,12 +1,18 @@
 import React from 'react';
 
 class AutoComplete extends React.Component {
-  constructor(){
-    super();
+  constructor(prop){
+    super(prop);
+
   }
+
   render() {
     return (
-      <h2>Auto Complete</h2>
+      <div className="autocomplete">
+        <input type="text"></input>
+        <ul>
+        </ul>
+      </div>
     );
   }
 }
