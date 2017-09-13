@@ -8,19 +8,15 @@ class TodoForm extends React.Component {
     this.updateTitle = this.updateTitle.bind(this);
     this.updateBody = this.updateBody.bind(this);
     this.submit = this.submit.bind(this);
-
-    window.state2 = this.state;
   }
 
   updateTitle(e) {
-    console.log(`title: ${e.target.value}`);
     this.setState({
       title: e.target.value
     });
   }
 
   updateBody(e) {
-    console.log(`body: ${e.target.value}`);
     this.setState({
       body: e.target.value
     });

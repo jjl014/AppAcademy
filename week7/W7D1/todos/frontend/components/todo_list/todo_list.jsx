@@ -2,12 +2,15 @@ import React from 'react';
 import ToDoListItem from './todo_list_item';
 import TodoForm from './todo_form';
 
-const TodoList = ({todos, receiveTodo}) => (
+const TodoList = ({todos, receiveTodo, removeTodo}) => (
   <div>
     <ul>
       {
         todos.map((item) => (
-          <ToDoListItem key={item.id} item={item}/>
+          <ToDoListItem key={item.id}
+                        item={item}
+                        receiveTodo={receiveTodo}
+                        removeTodo={removeTodo}/>
         ))
       }
     </ul>
