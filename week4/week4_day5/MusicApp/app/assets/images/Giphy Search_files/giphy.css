@@ -1,0 +1,44 @@
+body {
+  margin: 30px auto;
+  width: 70%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  width: inherit;
+  padding-left: 0;
+}
+
+.giphy-li {
+  float: left;
+  padding-right: 10px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.search-bar {
+  padding-bottom: 15px;
+}
+
+.search {
+  /*display: flex;*/
+}
+
+input {
+  width: 200px;
+  height: 21px;
+  font-size: 15px;
+  font-family: 'Helvetica';
+  margin-right: 2px;
+  padding: 0;
+  border: 1px solid lightgray;
+}
+
+button {
+  padding: 6px;
+  border: none;
+  font-size: 10px;
+}

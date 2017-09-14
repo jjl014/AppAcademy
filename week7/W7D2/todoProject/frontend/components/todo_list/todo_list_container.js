@@ -3,11 +3,13 @@ import TodoList from './todo_list';
 
 // Actions
 import { receiveTodos, receiveTodo, fetchTodos, createTodo } from '../../actions/todo_actions';
+import { clearErrors } from '../../actions/error_actions';
 import { allTodos } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
   todos: allTodos(state),
-  state
+  errors: state.errors,
+  state,
 });
 
 const mapDispatchToProps = dispatch => ({

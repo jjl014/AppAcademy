@@ -3,11 +3,8 @@ import RootReducer from '../reducers/root_reducer';
 import thunk from '../middlewares/thunk';
 import logger from 'redux-logger';
 
-const configureStore = (preloadedState = {}) => {
-  const store = createStore(RootReducer, preloadedState, applyMiddleware(thunk, logger));
-  store.subscribe(() => {
-    localStorage.state = JSON.stringify(store.getState());
-  });
+const configureStore = () => {
+  const store = createStore(RootReducer, applyMiddleware(thunk, logger));
   return store;
 };
 
