@@ -9,3 +9,66 @@ li img {
   width: 50px;
   height: 50px;
 }
+
+li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+.pokedex {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.poke-index {
+  float: left;
+  width: 35%;
+  overflow: auto;
+  padding-right: 2%;
+  border-right: 3px solid lightgray;
+}
+
+.poke-index li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2vw;
+}
+
+.poke-index li:hover {
+  background-color: #FF7F7F;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.poke-detail {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  width: 63%;
+  // border-left: 3px solid black;
+
+}
+
+.poke-detail-li {
+  margin-top: 10px;
+  font-size: 2vw;
+  list-style: none;
+  margin-left: 10px;
+}
+
+.poke-detail img {
+  width: 100%;
+  border-bottom: 3px solid lightgray;
+  padding: 10px;
+  // padding-bottom: 10px;
+}
+
+.poke-index a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}

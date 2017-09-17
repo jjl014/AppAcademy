@@ -22,13 +22,13 @@ export default class PokemonIndex extends React.Component {
 
     return (
       <section className='pokedex'>
-        <ul>
+        <ul className="poke-index">
           {pokemons}
         </ul>
         <Route
           path='/pokemon/:pokemonId'
           component={PokemonDetailContainer}
-          />
+        />
       </section>
     );
   }
