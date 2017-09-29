@@ -1,0 +1,45 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+html, body, div, span, h1, h2, h3, h4, a, p, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav {
+  font-family: "Helvetica Neue", HelveticaNeue, "TeX Gyre Heros", TeXGyreHeros, FreeSans, "Nimbus Sans L", "Liberation Sans", Arimo, Helvetica, Arial, sans-serif;
+}
+
+p.subheader {
+  font-weight: bold;
+}
+
+button{
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn-primary {
+  color: white;
+  border: solid 1px #8d0005;
+  background-color: #d90007;
+  background: linear-gradient(#d90007, #c91400);
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 7px 0;
+  /*box-shadow: 0 1px 1px rgba(0,0,0,0.3);*/
+}
+
+.btn-primary:hover {
+  background-color: #ed0008;
+  background: linear-gradient(#ed0008, #dd1600);
+}
